@@ -7,7 +7,6 @@ import {ScreenService} from '../services/screen.service';
   selector: 'fw-title-bar',
   templateUrl: './title-bar.component.html',
   styleUrls: ['./title-bar.component.css'],
-  encapsulation: ViewEncapsulation.None
 })
 export class TitleBarComponent implements OnInit {
 
