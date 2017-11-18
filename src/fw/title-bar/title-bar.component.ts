@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Injectable } from '@angular/core';
 
 import {ScreenService} from '../services/screen.service';
+import { MenuService } from '../services/menu.service';
 
 @Injectable()
 @Component({
@@ -10,7 +11,7 @@ import {ScreenService} from '../services/screen.service';
 })
 export class TitleBarComponent implements OnInit {
 
-  constructor(public screenService: ScreenService ) { }
+  constructor(public screenService: ScreenService, public menuService: MenuService ) { }
 
   ngOnInit() {
   }

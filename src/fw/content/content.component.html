@@ -2,5 +2,8 @@
 <!--vertical menu goes here-->
 
 <div class="body-style">
+    <fw-menu *ngIf="menuService.isVertical" class="vertical-menu">
+        
+               </fw-menu>
     <router-outlet></router-outlet>
 </div>

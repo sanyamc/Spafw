@@ -1,5 +1,8 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 
+import { MenuService } from '../services/menu.service';
+
+@Injectable()
 @Component({
   selector: 'fw-content',
   templateUrl: './content.component.html',
@@ -7,7 +10,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public menuService: MenuService) { }
 
   ngOnInit() {
   }

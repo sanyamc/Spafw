@@ -10,4 +10,9 @@ export interface MenuItem {
 @Injectable()
 export class MenuService {
     items: Array<any>;
+    isVertical = true;
+
+    toggleOrientation() {
+        this.isVertical = !this.isVertical;
+    }
 }

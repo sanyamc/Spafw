@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { IconFiles, FrameworkConfigSettings, FrameworkConfigService } from '../fw/services/framework-config.service';
+import { FrameworkConfigService, FrameworkConfigSettings } from '../fw/services/framework-config.service';
 import { MenuService } from '../fw/services/menu.service';
 import { initialMenuItems } from './app.menu';
 
@@ -10,22 +10,25 @@ import { initialMenuItems } from './app.menu';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private frameworkConfigService: FrameworkConfigService,
-              private menuService: MenuService){
+  
+  constructor (private frameworkConfigService: FrameworkConfigService,
+               private menuService: MenuService) {
 
-    let config: FrameworkConfigSettings = {
-      socialIcons:[
-        {imageFile: 'assets/social-fb-bw.png', alt:'Facebook',link:'http://www.facebook.com'},
-        {imageFile: 'assets/social-google-bw.png', alt:'Google',link:'http://www.google.com'},
-        {imageFile: 'assets/social-twitter-bw.png', alt:'Twitter',link:'http://www.Twitter.com'}
+    let config:FrameworkConfigSettings = {
+      socialIcons: [
+        { imageFile: 'assets/social-fb-bw.png', alt: 'Facebook', link: 'http://www.facebook.com'},
+        { imageFile: 'assets/social-google-bw.png', alt: 'Google +', link: 'http://www.google.com' },
+        { imageFile: 'assets/social-twitter-bw.png', alt: 'Twitter', link: 'http://www.twitter.com' }
       ],
-      showLanguageSelector:false,
-      showUserControls:true,
-      showStatusBar:true,
-      showStatusBarBreakpoint:800
+      showLanguageSelector: true,
+      showUserControls: true,
+      showStatusBar: true,
+      showStatusBarBreakpoint: 800
     };
 
     frameworkConfigService.configure(config);
+
     menuService.items = initialMenuItems;
+
   }
 }
