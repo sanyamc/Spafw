@@ -13,7 +13,8 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryMaintComponent } from './country-maint/country-maint.component';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
-import { SignInComponentComponent } from './sign-in-component/sign-in-component.component';
+import { UserService } from './services/user.service';
+import { UserApi } from '../fw/users/user-api';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,7 @@ import { SignInComponentComponent } from './sign-in-component/sign-in-component.
     CountryDetailComponent,
     CountryListComponent,
     CountryMaintComponent,
-    AuthenticatedUserComponent,
-    SignInComponentComponent
+    AuthenticatedUserComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,10 @@ import { SignInComponentComponent } from './sign-in-component/sign-in-component.
     FwModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    UserService,
+    { provide: UserApi, useExisting: UserService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from './content/content.component';
@@ -13,11 +14,13 @@ import { MenuService } from './services/menu.service';
 import { MenuComponent } from './Menus/menu/menu.component';
 import { MenuItemComponent } from './Menus/menu-item/menu-item.component';
 import { PopupMenuComponent } from './Menus/popup-menu/popup-menu.component'
+import { SignInComponent } from './users/sign-in/sign-in.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -27,7 +30,8 @@ import { PopupMenuComponent } from './Menus/popup-menu/popup-menu.component'
     StatusBarComponent,
     MenuComponent,
     MenuItemComponent,
-    PopupMenuComponent
+    PopupMenuComponent,
+    SignInComponent
   ],
   providers:[
     FrameworkConfigService,
