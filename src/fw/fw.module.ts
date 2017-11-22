@@ -15,6 +15,8 @@ import { MenuComponent } from './Menus/menu/menu.component';
 import { MenuItemComponent } from './Menus/menu-item/menu-item.component';
 import { PopupMenuComponent } from './Menus/popup-menu/popup-menu.component'
 import { SignInComponent } from './users/sign-in/sign-in.component';
+import { DynamicFormComponent } from './dynamic-forms/dynamic-form/dynamic-form.component';
+import { DynamicFieldComponent } from './dynamic-forms/dynamic-field/dynamic-field.component';
 
 @NgModule({
   imports: [
@@ -31,7 +33,9 @@ import { SignInComponent } from './users/sign-in/sign-in.component';
     MenuComponent,
     MenuItemComponent,
     PopupMenuComponent,
-    SignInComponent
+    SignInComponent,
+    DynamicFormComponent,
+    DynamicFieldComponent
   ],
   providers:[
     FrameworkConfigService,
@@ -45,7 +49,9 @@ import { SignInComponent } from './users/sign-in/sign-in.component';
     TopBarComponent,
     StatusBarComponent,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    DynamicFormComponent,
+    DynamicFormComponent
   ]
 })
 export class FwModule { }
