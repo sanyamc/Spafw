@@ -1,7 +1,11 @@
 
 <mat-nav-list>
     <span *ngFor="let item of menuService.items">
-    <a mat-list-item href="{{item.text}}" > {{ item.text }} </a>
+              <fw-menu-item [item]="item"
+                    [ngClass]="{'vertical-menu': menuService.isVertical }"
+                    [parentIsPopup]="false">
+      </fw-menu-item>
+    <!--<a mat-list-item href="{{item.route}}" > {{ item.text }} </a> -->
     <mat-divider></mat-divider>
     </span>
 
