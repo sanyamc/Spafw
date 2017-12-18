@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MatListModule} from '@angular/material/list';
 
 import { MenuItem, MenuService } from '../../services/menu.service';
 
