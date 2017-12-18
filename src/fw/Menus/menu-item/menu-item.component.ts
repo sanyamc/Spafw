@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostBinding, HostListener,
          Input, OnInit, Renderer } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { MenuItem, MenuService } from '../../services/menu.service';
 

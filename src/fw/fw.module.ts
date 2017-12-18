@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from './content/content.component';
@@ -12,6 +16,7 @@ import { FrameworkConfigService } from './services/framework-config.service';
 import { ScreenService } from './services/screen.service';
 import { MenuService } from './services/menu.service';
 import { MenuComponent } from './Menus/menu/menu.component';
+import { MatMenuComponent } from './Menus/mat-menu/mat-menu.component';
 import { MenuItemComponent } from './Menus/menu-item/menu-item.component';
 import { PopupMenuComponent } from './Menus/popup-menu/popup-menu.component'
 import { SignInComponent } from './users/sign-in/sign-in.component';
@@ -22,7 +27,11 @@ import { DynamicFieldComponent } from './dynamic-forms/dynamic-field/dynamic-fie
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatListModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -32,6 +41,7 @@ import { DynamicFieldComponent } from './dynamic-forms/dynamic-field/dynamic-fie
     StatusBarComponent,
     MenuComponent,
     MenuItemComponent,
+    MatMenuComponent,
     PopupMenuComponent,
     SignInComponent,
     DynamicFormComponent,
@@ -50,6 +60,7 @@ import { DynamicFieldComponent } from './dynamic-forms/dynamic-field/dynamic-fie
     StatusBarComponent,
     MenuComponent,
     MenuItemComponent,
+    MatMenuComponent,
     DynamicFormComponent,
     DynamicFormComponent
   ]

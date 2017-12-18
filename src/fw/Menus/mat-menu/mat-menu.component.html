@@ -1,0 +1,10 @@
+
+<mat-nav-list>
+    <span *ngFor="let item of menuService.items">
+    <a mat-list-item href="{{item.text}}" > {{ item.text }} </a>
+    <mat-divider></mat-divider>
+    </span>
+
+</mat-nav-list>
+
+

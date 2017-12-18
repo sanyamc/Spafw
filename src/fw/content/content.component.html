@@ -1,9 +1,22 @@
 
 <!--vertical menu goes here-->
+<mat-sidenav-container>
+<mat-sidenav opened mode="side">
 
-<div class="body-style">
+    <fw-mat-menu>
+    </fw-mat-menu>
+        
+    <!--
     <fw-menu *ngIf="menuService.isVertical" class="vertical-menu">
         
-               </fw-menu>
+    </fw-menu>
+    -->
+
+</mat-sidenav>
+<mat-sidenav-content>
+<div class="body-style">
+
     <router-outlet></router-outlet>
 </div>
+</mat-sidenav-content>
+</mat-sidenav-container>

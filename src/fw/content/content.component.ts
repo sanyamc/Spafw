@@ -1,4 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { MenuService } from '../services/menu.service';
 
